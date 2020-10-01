@@ -29,7 +29,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	"use strict";
 	$("#countdown").countdown({
-		date: "29 september 2020 12:00:00", /** Enter new date here **/
+		date: "4 octuber 2020 12:00:00", /** Enter new date here **/
 		format: "on"
 	},
 	function() {
