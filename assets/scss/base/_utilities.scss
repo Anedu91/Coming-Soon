@@ -1,0 +1,104 @@
+.text-center{
+  text-align: center;
+}
+/*FONT STYLES*/
+.fs{
+  &--italic{
+    font-style: italic;
+  }
+}
+/*COLORS*/
+.text-white{
+  color: $white-color!important;
+}
+.text-black{
+  color: $black-color!important;
+}
+.text-primary{
+  color: $principal-color!important;
+}
+.text-secondary{
+  color: $secondary-color!important;
+}
+.text-tertiary{
+  color: $tertiary-color!important;
+}
+.text-forty{
+  color: $forty-color!important;
+}
+.text-fifty{
+  color: $fifty-color!important;
+}
+
+.bg-fifty{
+  background-color: $fifty-color!important;
+}
+
+/*MARGINS*/
+.mt{
+  &--sm{
+    margin-top: 1rem;
+  }
+  &--md{
+    margin-top: 3rem;
+  }
+  &--lg{
+    margin-top: 5rem;
+  }
+  &--xxl{
+    margin-top: 10rem;
+  }
+}
+.mb{
+  &--sm{
+    margin-bottom: 1rem;
+  }
+  &--md{
+    margin-bottom: 3rem;
+  }
+  &--lg{
+    margin-bottom: 5rem;
+  }
+  &--xxl{
+    margin-bottom: 10rem;
+  }
+}
+/*DISPLAYS*/
+.flex{
+  display: flex;
+  &--center{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+%wavy{
+  margin-bottom: .5rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: $secondary-color;
+  text-decoration-style: wavy;
+}
+.wavy-under{
+  
+  &--primary{
+    @extend %wavy;
+    text-decoration-color: $principal-color;
+  }
+  &--secondary{
+    @extend %wavy;
+    text-decoration-color: $secondary-color;
+  }
+  &--tertiary{
+    @extend %wavy;
+    text-decoration-color: $tertiary-color;
+  }
+  &--forty{
+    @extend %wavy;
+    text-decoration-color: $forty-color;
+  }
+  &--fifty{
+    @extend %wavy;
+    text-decoration-color: $fifty-color;
+  }
+}

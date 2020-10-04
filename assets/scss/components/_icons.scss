@@ -1,0 +1,9 @@
+.arrow{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80px;
+  @include respond-above(lg){
+    max-width: 100px;
+  }
+}

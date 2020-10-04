@@ -1,0 +1,116 @@
+.about{
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2rem;
+  padding: 0 1.5rem;
+  @include respond-above(md){
+    grid-template-columns: 250px 1fr;
+    max-width: 95vw;
+    padding: 0;
+  }
+  @include respond-above(lg){
+    max-width: 85vw;
+    grid-template-columns: 350px 1fr;
+  }
+  @include respond-above(xxl){
+    grid-template-columns: 400px 1fr;
+  }
+  &__figure{
+    left: 0;
+    top: 0;
+    background: transparent;
+    position: relative;
+    height: 100%;
+    align-self: flex-end;    
+    display: none;
+    @include respond-above(md){
+      display: flex;
+    }
+    img{
+      display: block;
+      max-width: 250px;
+      margin-top: 3rem;
+      align-self: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      @include respond-above(lg){
+        max-width: 280px;
+      }
+    }
+    &:before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+       
+      background-image: url(../images/about-background.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      z-index: -1;    
+      @include respond-above(md){
+        background-size: contain;
+        background-position: 0 0;
+      }
+    }
+  }
+  &__article{
+    position: relative;
+    max-width: 70rem;
+    margin-left: auto;
+    align-self: flex-end;
+    grid-row: 1;
+    @include respond-above(md){
+      grid-row: auto;
+    }
+  }
+  &__img-article{
+    position: relative;
+    margin-top: 1rem;
+    @include respond-above(md){
+      display: none;
+    }
+    &:before{
+      content: '';
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 3rem;
+      background: $secondary-color;
+      z-index: -1;
+    }
+    &:after{
+      content: '';
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 3rem;
+      background: $forty-color;
+      z-index: -1;
+    }
+    img{
+      border-radius: 50%;
+      max-width: 70%;
+      display: block;
+      margin: auto;
+      border: 1rem solid $tertiary-color;
+    }
+  }
+  p{
+    margin-bottom: .5rem;
+    line-height: 1.5;
+    @include respond-above(xl){
+      margin-bottom: .8rem;
+    }
+    @include respond-above(xxl){
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+  }
+}

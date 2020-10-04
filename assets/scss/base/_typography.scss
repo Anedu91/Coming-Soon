@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600;700&family=Montserrat+Alternates:ital,wght@0,400;0,600;1,400&family=Prompt:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Kanit:wght@300;400&family=Vollkorn:ital,wght@0,400;0,700;1,500&display=swap');
+body{
+  font-family: $principal-font;
+  color: $text-color;
+
+}
+
+%heading{
+  font-family: $title-font;
+}
+%regular-text{
+  line-height: 1.1;
+  letter-spacing: .5px;
+  font-size: 1.2rem;
+}
+.heading-1{
+  @extend %heading;
+  line-height: .8;
+}
+.heading-2{
+  @extend %heading;
+  margin-bottom: 1rem;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: $principal-color;
+  @include respond-above(sm){
+    font-size: 3.5rem;
+  }
+  @include respond-above(lg){
+    font-size: 3.5rem;
+  }
+  &--big{
+    @extend %heading;
+    color: $principal-color;
+    font-size: 3.5rem;
+    @include respond-above(lg){
+      font-size: 4.5rem;
+
+    }
+  }
+}
+.heading-3{
+  @extend %heading;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;  
+  @include respond-above(sm){
+    font-size: 1.8rem;
+  }
+}
+.heading-4{
+  font-size: 1.4rem;
+}
+p{
+ @extend %regular-text;
+ line-height: 1.8;
+ font-size: 1.2rem;
+}
+li{
+  @extend %regular-text;
+}
+.text-bigger{
+  font-family: $title-font;
+  color: $principal-color;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  @include respond-above(sm){
+    font-size: 5rem;
+    text-align: left;
+  }
+}
+.tooltip{
+  position: relative;
+  &__icon{
+    font-size: 1rem;
+    position: absolute;
+    color: rgba($text-color,.8);
+
+  }
+}
+.muted{
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba($text-color,.8);
+}
